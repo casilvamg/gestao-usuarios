@@ -1,4 +1,4 @@
-# Gestao de Usuarios - Angular 14
+# Gestão de Usuários - Angular 14
 
 Uma aplicação Angular 14 para gerenciamento de usuários com CRUD completo, utilizando arquitetura modular e boas práticas do Angular.
 Aplicação criada para efetuar testes na ferramenta github copilot
