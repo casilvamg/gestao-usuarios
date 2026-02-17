@@ -1,0 +1,83 @@
+<div>
+  <div class="form-wrapper">
+    <h1>Cadastro de Usuários</h1>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Nome:</label>
+        <input
+          type="text"
+          id="name"
+          formControlName="name"
+          placeholder="Digite seu nome"
+        />
+        <div class="error" *ngIf="isFieldInvalid('name')">
+          <span *ngIf="form.get('name')?.hasError('required')"
+            >Nome é obrigatório</span
+          >
+          <span *ngIf="form.get('name')?.hasError('minlength')"
+            >Nome deve ter pelo menos 3 caracteres</span
+          >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          formControlName="email"
+          placeholder="Digite seu email"
+        />
+        <div class="error" *ngIf="isFieldInvalid('email')">
+          <span *ngIf="form.get('email')?.hasError('required')"
+            >Email é obrigatório</span
+          >
+          <span *ngIf="form.get('email')?.hasError('email')"
+            >Email inválido</span
+          >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="telefone">Telefone:</label>
+        <input
+          type="text"
+          id="telefone"
+          formControlName="telefone"
+          placeholder="Digite seu Telefone"
+        />
+        <div class="error" *ngIf="isFieldInvalid('telefone')">
+          <span *ngIf="form.get('telefone')?.hasError('required')"
+            >Telefone é obrigatório</span
+          >
+          <span *ngIf="form.get('telefone')?.hasError('minlength')"
+            >Telefone deve ter pelo menos 8 caracteres</span
+          >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="cpf">CPF:</label>
+        <input
+          type="text"
+          id="cpf"
+          formControlName="cpf"
+          placeholder="Digite seu CPF"
+        />
+        <div class="error" *ngIf="isFieldInvalid('cpf')">
+          <span *ngIf="form.get('cpf')?.hasError('required')"
+            >CPF é obrigatório</span
+          >
+          <span *ngIf="form.get('cpf')?.hasError('pattern')">CPF inválido</span>
+        </div>
+      </div>
+
+      <button type="submit" [disabled]="form.invalid">Enviar</button>
+    </form>
+
+    <div class="success-message" *ngIf="submitted">
+      <p>Formulário enviado com sucesso!</p>
+      <pre>{{ formData | json }}</pre>
+    </div>
+  </div>
+</div>

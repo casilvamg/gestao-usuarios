@@ -1,0 +1,132 @@
+.navbar {
+  width: 100%;
+  height: 64px;
+  background: rgb(0, 255, 255);
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.navbar-title {
+  color: black;
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.layout {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  background: rgb(255, 255, 255);
+}
+.menu {
+  width: 240px;
+  background: blue;
+  color: #fff;
+  padding: 0;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.3);
+  transition: width 0.2s ease;
+}
+.menu.collapsed {
+  width: 72px;
+}
+
+.menu-toggle {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-weight: 700;
+  padding: 12px 16px;
+  cursor: pointer;
+  text-align: right;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 20px 0;
+  margin: 0;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  margin: 8px 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+  font-weight: 700;
+}
+
+.menu-abbr {
+  display: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.menu.collapsed .menu-item {
+  justify-content: center;
+  margin: 8px 8px;
+  padding: 16px 8px;
+}
+
+.menu.collapsed .menu-text {
+  display: none;
+}
+
+.menu.collapsed .menu-abbr {
+  display: inline-flex;
+}
+
+.menu-item:hover {
+  background: rgba(102, 126, 234, 0.15);
+  transform: translateX(4px);
+}
+
+.menu-item.active {
+  background: rgba(102, 126, 234, 0.25);
+  border-left: 3px solid #667eea;
+  font-weight: 600;
+  color: #667eea;
+}
+
+.content {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 0;
+  overflow: auto;
+}
+
+.footer {
+  width: 100%;
+  height: 48px;
+  padding: 0 24px;
+  background: rgb(0, 255, 255);
+  color: black;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: 0.9px;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  flex-shrink: 0;
+}

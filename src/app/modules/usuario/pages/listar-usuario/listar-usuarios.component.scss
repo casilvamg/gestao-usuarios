@@ -1,0 +1,89 @@
+.listar-usuarios-wrapper {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  padding: 32px 24px;
+  max-width: 900px;
+  width: 100%;
+}
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 24px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 0;
+  table-layout: auto;
+}
+thead,
+tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: auto;
+}
+tbody {
+  display: block;
+  max-height: calc(5 * 48px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: 1px solid #eee;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+}
+tbody tr {
+  height: 48px;
+}
+thead {
+  border: 1px solid #eee;
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+}
+th,
+td {
+  padding: 12px 8px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+th {
+  background: #3b3f7a;
+  color: #f5f6ff;
+  font-weight: 700;
+}
+th:nth-last-child(2),
+td:nth-last-child(2) {
+  border-left: 2px solid #e1e3ee;
+}
+
+th:nth-last-child(2),
+th:last-child,
+td:nth-last-child(2),
+td:last-child {
+  text-align: center;
+  width: 33px;
+  min-width: 33px;
+  white-space: nowrap;
+}
+th:nth-last-child(2),
+th:last-child,
+td:nth-last-child(2),
+td:last-child {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+tbody tr:nth-child(even) {
+  background: #f3f4f7;
+}
+tbody tr:hover {
+  background: #e6e9f5;
+}
+tr:last-child td {
+  border-bottom: none;
+}
+.vazio {
+  text-align: center;
+  color: #888;
+  font-size: 1.1rem;
+  padding: 32px 0 0 0;
+}

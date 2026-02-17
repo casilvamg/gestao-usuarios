@@ -1,0 +1,36 @@
+<div class="listar-usuarios-wrapper">
+  <h2>Usuários Cadastrados</h2>
+  <table *ngIf="usuarios && usuarios.length; else vazio">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Telefone</th>
+        <th>CPF</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let usuario of usuarios">
+        <td>{{ usuario.name }}</td>
+        <td>{{ usuario.email }}</td>
+        <td>{{ usuario.telefone }}</td>
+        <td>{{ usuario.cpf }}</td>
+        <td>
+          <button (click)="removerUsuario(usuario.cpf)">
+            <i class="fas fa-trash"></i>
+          </button>
+        </td>
+        <td>
+          <button (click)="editarUsuario(usuario.cpf)">
+            <i class="fas fa-edit"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <ng-template #vazio>
+    <div class="vazio">Nenhum usuário cadastrado.</div>
+  </ng-template>
+</div>

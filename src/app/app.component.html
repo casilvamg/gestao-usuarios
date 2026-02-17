@@ -1,0 +1,40 @@
+<nav class="navbar">
+  <span class="navbar-title">Gestão de Usuários</span>
+</nav>
+
+<div class="layout">
+  <nav class="menu" [class.collapsed]="isMenuCollapsed">
+    <button
+      class="menu-toggle"
+      (click)="toggleMenu()"
+      aria-label="Alternar menu"
+    >
+      {{ isMenuCollapsed ? ">>" : "<<" }}
+    </button>
+    <ul>
+      <li
+        class="menu-item"
+        routerLink="/usuarios/cadastro"
+        routerLinkActive="active"
+      >
+        <span class="menu-abbr">C</span>
+        <span class="menu-text">Cadastro de Usuários</span>
+      </li>
+      <li
+        class="menu-item"
+        routerLink="/usuarios/listar"
+        routerLinkActive="active"
+      >
+        <span class="menu-abbr">L</span>
+        <span class="menu-text">Listar Usuários</span>
+      </li>
+    </ul>
+  </nav>
+  <main class="content">
+    <router-outlet></router-outlet>
+  </main>
+</div>
+
+<footer class="footer">
+  <span>Desenvolvido por Casilvamg Solutions</span>
+</footer>
